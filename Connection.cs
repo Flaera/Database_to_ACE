@@ -1,4 +1,6 @@
 using System.Data.SQLite;
+using System.Text;
+using System.Windows;
 
 namespace bd_ace
 {
