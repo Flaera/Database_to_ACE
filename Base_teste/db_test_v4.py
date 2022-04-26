@@ -27,9 +27,27 @@ for i in csv_contents:
     # print("sql_comand=", sql)
     if (acc>0):
         conn.execute(
-            """INSERT INTO Jogadores (ID,Name,Age,Overall,Potential,Preferred_Foot,Weak_Foot,Position,Height,Weight,Finishing,HeadingAccuracy,ShortPassing,Volleys,Dribbling,Curve,FKAccuracy,LongPassing,BallControl,Acceleration,SprintSpeed,Agility,Reactions,Balance,ShotPower,Jumping,Stamina,Strength,LongShots,Aggression,Interceptions,Positioning,Vision,Penalties,Composure,Marking)
-        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);""",
-         [str(i[0]),str(i[1]),str(i[2]),str(i[3]),str(i[4]),str(i[5]),
+            """INSERT INTO Jogadores (
+                ID,Name,Age,
+                Overall,Potential,Preferred_Foot,
+                Weak_Foot,Position,Height,
+                Weight,Finishing,HeadingAccuracy,
+                ShortPassing,Volleys,Dribbling,
+                Curve,FKAccuracy,LongPassing,
+                BallControl,Acceleration,SprintSpeed,
+                Agility,Reactions,Balance,
+                ShotPower,Jumping,Stamina,
+                Strength,LongShots,Aggression,
+                Interceptions,Positioning,Vision,
+                Penalties,Composure,Marking)
+        VALUES (
+            ?,?,?,?,?,?,
+            ?,?,?,?,?,?,
+            ?,?,?,?,?,?,
+            ?,?,?,?,?,?,
+            ?,?,?,?,?,?,
+            ?,?,?,?,?,?);""",
+         [str(i[1]),str(i[2]),str(i[3]),str(i[4]),str(i[5]),
         str(i[6]),str(i[7]),str(i[8]),
         str(i[9]),str(i[10]),str(i[11]),str([12]),
         str(i[13]),str(i[14]),str(i[15]),str(i[16]),
@@ -37,7 +55,8 @@ for i in csv_contents:
         str(i[21]),str(i[22]),str(i[23]),str(i[24]),
         str(i[25]),str(i[26]),str(i[27]),str(i[28]),
         str(i[29]),str(i[30]),str(i[31]),
-        str(i[32]),str(i[33]),str(i[34]),str(i[35])]
+        str(i[32]),str(i[33]),str(i[34]),str(i[35]),
+        str(i[36])]
         )
     acc += 1
 
