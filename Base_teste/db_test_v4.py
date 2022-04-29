@@ -7,9 +7,26 @@ print ("banco de dados aberto com sucesso")
 file_csv = open("new_data.csv", "r")
 csv_contents = csv.reader(file_csv)
 # for j in csv_contents:
-#     print(j[35])
+#     print(j[1])
 
-cursor = conn.cursor()
+
+def ConverterINT(string):
+    # acc = 0
+    # number = 0
+    # for i in string:
+    #     if (acc==0):
+    #         number=number+int(i)
+    #     else:
+    #         number=(number)+(int(i)*10)
+    #     acc+=1
+    #     if (acc==5):break
+    #     print("-i=", int(i), "acc=", acc, "method=", 10)
+    number = int(string)
+    print("number=", number)
+    return number
+
+
+# cursor = conn.cursor()
 acc = 0
 for i in csv_contents:
     # sql = "INSERT INTO Jogadores (Name,Age,Overall,Potential,Preferred_Foot,Weak_Foot,Position,Height,Weight,Finishing,HeadingAccuracy,ShortPassing,Volleys,Dribbling,Curve,FKAccuracy,LongPassing,BallControl,Acceleration,SprintSpeed,Agility,Reactions,Balance,ShotPower,Jumping,Stamina,Strength,LongShots,Aggression,Interceptions,Positioning,Vision,Penalties,Composure,Marking)" \
@@ -23,7 +40,7 @@ for i in csv_contents:
     #     "+csv_contents[i][29]+","+csv_contents[i][30]+","+csv_contents[i][31]+","+" \
     #     "+csv_contents[i][32]+","+csv_contents[i][33]+","+csv_contents[i][34]+","+csv_contents[i][35]+");"
     # sql = )
-    print(acc)
+    # print(acc)
     # print("sql_comand=", sql)
     if (acc>0):
         conn.execute(
@@ -47,7 +64,7 @@ for i in csv_contents:
             ?,?,?,?,?,?,
             ?,?,?,?,?,?,
             ?,?,?,?,?,?);""",
-         [str(i[1]),str(i[2]),str(i[3]),str(i[4]),str(i[5]),
+         [ConverterINT(i[1]),str(i[2]),str(i[3]),str(i[4]),str(i[5]),
         str(i[6]),str(i[7]),str(i[8]),
         str(i[9]),str(i[10]),str(i[11]),str([12]),
         str(i[13]),str(i[14]),str(i[15]),str(i[16]),
