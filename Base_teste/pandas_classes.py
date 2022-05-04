@@ -6,6 +6,7 @@ class CreateDB():
     def __init__(self):
         """Constructor:
         Constructor to create to database.
+	DEPRECATED: It need corrections!!
         """
         conn = sqlite3.connect ('db_test')
         print ("Banco de dados aberto com sucesso=", conn)

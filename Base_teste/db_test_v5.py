@@ -2,7 +2,8 @@ from pandas_classes import CreateDB
 
 
 def __main__():
-    db = CreateDB()
+    # db = CreateDB()
+    # DEPRECATED: It need corrections in class CreateDB()
 
 
 
