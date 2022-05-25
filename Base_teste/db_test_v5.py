@@ -1,9 +1,9 @@
-from pandas_classes import CreateDB
+from pandas_classes import CreateTableMedia
 
 
 def __main__():
-    # db = CreateDB()
-    # DEPRECATED: It need corrections in class CreateDB()
+    db = CreateTableMedia()
+    
 
 
 
